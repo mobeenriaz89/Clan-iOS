@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		581EED98642D62918B78DDFA /* Pods_Clan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A1F68AFBC7A0AFAE5F80F1 /* Pods_Clan.framework */; };
+		F5916B7C2ACC0EF900DABB4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */; };
 		F5A5B5932AC3F5AF00C9542C /* ClanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5B5922AC3F5AF00C9542C /* ClanApp.swift */; };
 		F5A5B5952AC3F5AF00C9542C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5B5942AC3F5AF00C9542C /* ContentView.swift */; };
 		F5A5B5972AC3F5B300C9542C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A5B5962AC3F5B300C9542C /* Assets.xcassets */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56B0F4E33FD52DF44AFF0951 /* Pods-Clan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clan.debug.xcconfig"; path = "Target Support Files/Pods-Clan/Pods-Clan.debug.xcconfig"; sourceTree = "<group>"; };
+		68E947C79FB4DE6C160E5060 /* Pods-Clan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clan.release.xcconfig"; path = "Target Support Files/Pods-Clan/Pods-Clan.release.xcconfig"; sourceTree = "<group>"; };
+		85A1F68AFBC7A0AFAE5F80F1 /* Pods_Clan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F5A5B58F2AC3F5AF00C9542C /* Clan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A5B5922AC3F5AF00C9542C /* ClanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanApp.swift; sourceTree = "<group>"; };
 		F5A5B5942AC3F5AF00C9542C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,17 +44,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				581EED98642D62918B78DDFA /* Pods_Clan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B59DCE7CFEE49C6F0AF477D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				56B0F4E33FD52DF44AFF0951 /* Pods-Clan.debug.xcconfig */,
+				68E947C79FB4DE6C160E5060 /* Pods-Clan.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C92E4424FA8EC87306965C67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85A1F68AFBC7A0AFAE5F80F1 /* Pods_Clan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5916B7D2ACC0F0500DABB4B /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				F5A5B5A22AC4143400C9542C /* OnBoardIcon.swift */,
+				F5A5B5A42AC414FB00C9542C /* InputField.swift */,
+				F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		F5916B7E2ACC0FED00DABB4B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F5A5B5A02AC411BF00C9542C /* LoginView.swift */,
+				F5A5B5A62AC440D600C9542C /* SignupView.swift */,
+				F5A5B5A82AC4432F00C9542C /* BaseView.swift */,
+				F5A5B5AA2AC4475E00C9542C /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F5A5B5862AC3F5AF00C9542C = {
 			isa = PBXGroup;
 			children = (
 				F5A5B5912AC3F5AF00C9542C /* Clan */,
 				F5A5B5902AC3F5AF00C9542C /* Products */,
+				2B59DCE7CFEE49C6F0AF477D /* Pods */,
+				C92E4424FA8EC87306965C67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,12 +115,8 @@
 				F5A5B5942AC3F5AF00C9542C /* ContentView.swift */,
 				F5A5B5962AC3F5B300C9542C /* Assets.xcassets */,
 				F5A5B5982AC3F5B300C9542C /* Preview Content */,
-				F5A5B5A02AC411BF00C9542C /* LoginView.swift */,
-				F5A5B5A62AC440D600C9542C /* SignupView.swift */,
-				F5A5B5A22AC4143400C9542C /* OnBoardIcon.swift */,
-				F5A5B5A42AC414FB00C9542C /* InputField.swift */,
-				F5A5B5A82AC4432F00C9542C /* BaseView.swift */,
-				F5A5B5AA2AC4475E00C9542C /* HomeView.swift */,
+				F5916B7E2ACC0FED00DABB4B /* Views */,
+				F5916B7D2ACC0F0500DABB4B /* CustomViews */,
 			);
 			path = Clan;
 			sourceTree = "<group>";
@@ -92,9 +136,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5A5B59D2AC3F5B300C9542C /* Build configuration list for PBXNativeTarget "Clan" */;
 			buildPhases = (
+				1B790AC90AB978423172CAE4 /* [CP] Check Pods Manifest.lock */,
 				F5A5B58B2AC3F5AF00C9542C /* Sources */,
 				F5A5B58C2AC3F5AF00C9542C /* Frameworks */,
 				F5A5B58D2AC3F5AF00C9542C /* Resources */,
+				90270B494978FF51497B68F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,6 +196,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B790AC90AB978423172CAE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90270B494978FF51497B68F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clan/Pods-Clan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clan/Pods-Clan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clan/Pods-Clan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5A5B58B2AC3F5AF00C9542C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -157,6 +245,7 @@
 			files = (
 				F5A5B5A72AC440D600C9542C /* SignupView.swift in Sources */,
 				F5A5B5A12AC411BF00C9542C /* LoginView.swift in Sources */,
+				F5916B7C2ACC0EF900DABB4B /* CustomButton.swift in Sources */,
 				F5A5B5952AC3F5AF00C9542C /* ContentView.swift in Sources */,
 				F5A5B5A32AC4143400C9542C /* OnBoardIcon.swift in Sources */,
 				F5A5B5A92AC4432F00C9542C /* BaseView.swift in Sources */,
@@ -290,6 +379,7 @@
 		};
 		F5A5B59E2AC3F5B300C9542C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B0F4E33FD52DF44AFF0951 /* Pods-Clan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -319,6 +409,7 @@
 		};
 		F5A5B59F2AC3F5B300C9542C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68E947C79FB4DE6C160E5060 /* Pods-Clan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
