@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InputField: View {
     @State var placeHolder: String = "Placeholder"
-    @State var text: String = ""
+    @State var text: String = "hi"
     
     var body: some View {
         TextField(placeHolder, text: $text)
@@ -20,5 +20,5 @@ struct InputField: View {
 }
 
 #Preview {
-    InputField()
+    InputField(placeHolder: "placeHolder", text: "text")
 }

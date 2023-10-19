@@ -11,34 +11,49 @@
 //play.circle.fill
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginView: View {
     @State private var text: String = ""
     
     
     var body: some View {
-        NavigationStack{
             ZStack{
                 Image("appBg").resizable()
                     .ignoresSafeArea()
                 VStack{
                     OnBoardIcon(img: "person.badge.key")
                     Spacer()
-                    InputField(placeHolder: "Email").padding(8)
-                    InputField(placeHolder: "Password").padding(8)
+                    let tfEmail = InputField(placeHolder: "Email")
+                    tfEmail.padding(8)
+                    let tfPassword = InputField(placeHolder: "Password")
+                    tfPassword.padding(8)
                     Spacer()
-                    NavigationLink(destination: HomeView()){
+                    Button {
+                        let email = tfEmail.text
+                        let password = tfPassword.text
+                        if !email.isEmpty && !password.isEmpty{
+                            //Autheticating user with Firebase Authentication
+                            FirebaseAuthModel.login(email: email, password: password) { isSuccess, msg in
+                                if !isSuccess{
+                                    Alert(title: Text("Error"),message: Text(msg))
+                                }else{
+                                    AppDefaults.setLoggedIn(loggedIn: true)
+                                }
+                            }
+                        }
+                    } label: {
                         Image(systemName: "play.circle.fill")
                             .resizable()
                             .tint(.black)
                             .frame(width: 80, height: 80)
                     }
-                    
                 }
                 .padding()
             }
-        }
     }
+    
+    
 }
 
 #Preview {

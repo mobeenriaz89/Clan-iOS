@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CustomButton: View {
     var text: String
-    
     var body: some View {
         Text(text)
             .background(.black)
