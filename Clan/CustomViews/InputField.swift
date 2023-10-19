@@ -8,17 +8,19 @@
 import SwiftUI
 
 struct InputField: View {
-    @State var placeHolder: String = "Placeholder"
-    @State var text: String = "hi"
+    @State var placeHolder: String = ""
+    @State var text: String = ""
     
     var body: some View {
         TextField(placeHolder, text: $text)
+            .textInputAutocapitalization(.never)
             .textFieldStyle(.roundedBorder)
             .tint(.white)
             .font(.custom("futura", size: 20))
+            .textCase(.lowercase)
     }
 }
 
 #Preview {
-    InputField(placeHolder: "placeHolder", text: "text")
+    InputField(placeHolder: "", text: "")
 }
