@@ -38,6 +38,7 @@
 		F5916B7C2ACC0EF900DABB4B /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */; };
 		F5916B8A2ACC36CA00DABB4B /* FirebaseAuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5916B892ACC36CA00DABB4B /* FirebaseAuthModel.swift */; };
 		F5916B8C2ACC3ADC00DABB4B /* AppDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5916B8B2ACC3ADC00DABB4B /* AppDefaults.swift */; };
+		F5A387B52AE265EB006E285E /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A387B42AE265EB006E285E /* CustomProgressView.swift */; };
 		F5A5B5932AC3F5AF00C9542C /* ClanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5B5922AC3F5AF00C9542C /* ClanApp.swift */; };
 		F5A5B5952AC3F5AF00C9542C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A5B5942AC3F5AF00C9542C /* ContentView.swift */; };
 		F5A5B5972AC3F5B300C9542C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A5B5962AC3F5B300C9542C /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		F5916B892ACC36CA00DABB4B /* FirebaseAuthModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAuthModel.swift; sourceTree = "<group>"; };
 		F5916B8B2ACC3ADC00DABB4B /* AppDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDefaults.swift; sourceTree = "<group>"; };
+		F5A387B42AE265EB006E285E /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		F5A5B58F2AC3F5AF00C9542C /* Clan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A5B5922AC3F5AF00C9542C /* ClanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClanApp.swift; sourceTree = "<group>"; };
 		F5A5B5942AC3F5AF00C9542C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F5A5B5A22AC4143400C9542C /* OnBoardIcon.swift */,
 				F5A5B5A42AC414FB00C9542C /* InputField.swift */,
 				F5916B7B2ACC0EF900DABB4B /* CustomButton.swift */,
+				F5A387B42AE265EB006E285E /* CustomProgressView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 			files = (
 				F5916B8A2ACC36CA00DABB4B /* FirebaseAuthModel.swift in Sources */,
 				F5A5B5A72AC440D600C9542C /* SignupView.swift in Sources */,
+				F5A387B52AE265EB006E285E /* CustomProgressView.swift in Sources */,
 				F5A5B5A12AC411BF00C9542C /* LoginView.swift in Sources */,
 				F5916B7C2ACC0EF900DABB4B /* CustomButton.swift in Sources */,
 				F5A5B5952AC3F5AF00C9542C /* ContentView.swift in Sources */,

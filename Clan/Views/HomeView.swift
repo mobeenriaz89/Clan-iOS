@@ -8,15 +8,28 @@
 import SwiftUI
 
 struct HomeView: View {
+
+    @Binding var isPresented: Bool
+
     var body: some View {
         ZStack{
             Image("appBg").resizable()
                 .ignoresSafeArea()
-            Text("Home")
+            VStack{
+                Text("Home")
+                
+                
+                Button(action: {
+                    isPresented = false
+                }, label: {
+                    CustomButton(text: "Logout")
+                        .background(.black)
+                        .cornerRadius(10)
+                        .padding(8)
+                })
+            }
+                
         }
     }
 }
 
-#Preview {
-    HomeView()
-}

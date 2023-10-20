@@ -14,18 +14,30 @@ import SwiftUI
 import FirebaseAuth
 
 struct LoginView: View {
-    @State private var emailTxt: String = ""
-    @State private var passTxt: String = ""
-    @State private var errorMsg: String = ""
-    
+    @State private var emailTxt: String = "mubeenriaz89@gmail.com"
+    @State private var passTxt: String = "abc123"
+    @State private var loginMsg: String = ""
+    @State private var isLoading = false
     @State private var showAlert = false
+    @State var bounceValue: Int = 0
+    @State var showModal = false
 
     var body: some View {
+        NavigationStack{
             ZStack{
                 Image("appBg").resizable()
                     .ignoresSafeArea()
+                
                 VStack{
-                    OnBoardIcon(img: "person.badge.key")
+                    //OnBoardIcon(img: "person.badge.key")
+                    Image(systemName: "person")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100,height: 100)
+                        .foregroundStyle(.tint)
+                        .tint(.black)
+                        .symbolEffect(.variableColor, isActive: isLoading)
+                    
                     Spacer()
                     
                     TextField("Email", text: $emailTxt)
@@ -42,24 +54,24 @@ struct LoginView: View {
                         .font(.custom("futura", size: 20))
                         .textCase(.lowercase)
                     
-//                    let tfEmail = InputField(placeHolder: "Email",text: $emailTxt)
-//                    tfEmail.padding(8)
-//                    let tfPassword = InputField(placeHolder: "Password",text: $passTxt)
-//                    tfPassword.padding(8)
                     Spacer()
-                        .alert(errorMsg, isPresented: $showAlert) {
-                                    Button("OK", role: .cancel) { }
-                                }
+                        .alert(loginMsg, isPresented: $showAlert) {
+                            Button("OK", role: .cancel) {
+                            }
+                        }
+                    
                     Button {
                         if !emailTxt.isEmpty && !passTxt.isEmpty{
+                            isLoading = true
                             //Autheticating user with Firebase Authentication
                             FirebaseAuthModel.login(email: emailTxt, password: passTxt) { isSuccess, msg in
-                                if !isSuccess{
-                                    self.errorMsg = msg
-                                    showAlert = true
-                                }else{
+                                isLoading = false
+                                self.loginMsg = msg
+                                
+                                if isSuccess{
                                     AppDefaults.setLoggedIn(loggedIn: true)
-                                    self.errorMsg = msg
+                                    self.showModal = true
+                                }else{
                                     showAlert = true
                                 }
                             }
@@ -69,11 +81,27 @@ struct LoginView: View {
                             .resizable()
                             .tint(.black)
                             .frame(width: 80, height: 80)
+                            .symbolEffect(.disappear, isActive: isLoading)
+                        
                     }
                     
                 }
                 .padding()
+                if isLoading {
+                    
+                    ProgressView()
+                        .controlSize(.large)
+                        .tint(.black)
+                        .foregroundColor(.gray)
+                        .scaleEffect(x:2, y: 2, anchor: .center)
+                        .padding(20)
+                    
+                }
             }
+            .fullScreenCover(isPresented: $showModal, content: {
+                HomeView(isPresented: $showModal)
+            })
+        }
     }
     
     
