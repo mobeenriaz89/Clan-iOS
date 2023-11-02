@@ -105,7 +105,7 @@ struct SignupView: View {
                 }
             }
             .fullScreenCover(isPresented: $showModal, content: {
-                HomeView(isPresented: $showModal)
+                HomeView(isPresented: $showModal, msgTxt: "")
             })
         }
     }

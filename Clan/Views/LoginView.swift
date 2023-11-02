@@ -82,7 +82,6 @@ struct LoginView: View {
                             .tint(.black)
                             .frame(width: 80, height: 80)
                             .symbolEffect(.disappear, isActive: isLoading)
-                        
                     }
                     
                 }
@@ -99,7 +98,7 @@ struct LoginView: View {
                 }
             }
             .fullScreenCover(isPresented: $showModal, content: {
-                HomeView(isPresented: $showModal)
+                HomeView(isPresented: $showModal, msgTxt: "")
             })
         }
     }

@@ -8,11 +8,6 @@
 import Foundation
 import FirebaseAuth
 
-protocol AuthProtocol{
-    func authResponse(isSuccess: Bool, msg: String?)
-        
-}
-
 struct FirebaseAuthModel {
     
     static func login(email: String, password: String, completion:@escaping (Bool,String) -> Void) {
@@ -45,6 +40,10 @@ struct FirebaseAuthModel {
             print("Error signing out: \(error)")
             completion(false, error.localizedDescription)
         }
+    }
+    
+    static func getLoggedInUser() -> User?{
+        return Auth.auth().currentUser
     }
     
 }
